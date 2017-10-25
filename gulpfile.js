@@ -60,29 +60,29 @@ gulp.task('myServer',['devWatch','connect','imageMinDev','changeLessDev','change
 
 
 //js压缩 交付
-var distJs = require('./gulp/dist/js.dist.js');
+var distJs = require('./gulp/dis/js.dist.js');
 
 gulp.task('distJs', distJs);
 
 
 //css压缩 交付
-var distCss = require('./gulp/dist/css.dist.js');
+var distCss = require('./gulp/dis/css.dist.js');
 
 gulp.task('distCss', distCss);
 
 
 //图片移动
-var distImg = require('./gulp/dist/img.dist.js');
+var distImg = require('./gulp/dis/img.dist.js');
 
 gulp.task('distImg', distImg);
 
 //清除
-var distClean = require('./gulp/dist/clean.dist');
+var distClean = require('./gulp/dis/clean.dist');
 
 gulp.task('distClean', distClean);
 
 //html
-var distHtml = require('./gulp/dist/html.dist.js');
+var distHtml = require('./gulp/dis/html.dist.js');
 
 gulp.task('distHtml', distHtml);
 
