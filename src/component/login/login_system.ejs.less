@@ -4,24 +4,103 @@
   height: 100%;
   background: #49c999;
   /*头部背景*/
-  .background_title{
-    width: 100%;
+  .result_title {
+    background: #49c999;
     height: 200px;
-    background: #E9E9E9;
     position: relative;
+    overflow: hidden;
     /*商城logo*/
     .login_home_logo{
-      background: #fff;
-      position: absolute;
-      top:50%;
-      left:50%;
-      border-radius: 26px;
-      margin:-32px 0 0 -70px;
-      font-size: 26px;
-      padding: 10px 15px;
-      color: #49c999;
+    background: #fff;
+    position: absolute;
+    top:50%;
+    left:50%;
+    border-radius: 24px;
+    margin:-32px 0 0 -70px;
+    font-size: 26px;
+    padding: 10px 15px;
+    color: #49c999;
+    }
+
+    /*会动的圆*/
+    .result_round {
+
+      &:after, &:before {
+
+        content: '';
+        display: block;
+        background: #8edec0;
+        border-radius: 100%;
+        position: absolute;
+
+      }
+
+      &:after {
+
+        width: 10px;
+        height: 10px;
+
+      }
+
+      &:before {
+
+        width: 20px;
+        height: 20px;
+
+      }
+
+      &.top:after {
+
+        top: 20px;
+        left: 20px;
+        animation: result_round_top 2s infinite alternate;
+
+      }
+
+      &.top:before {
+
+        top: 40px;
+        left: 60px;
+        animation: result_round_top 2s .5s infinite alternate;
+
+      }
+
+      &.bottom:after {
+
+        bottom: 80px;
+        right: 20px;
+        animation: result_round_bottom 2s .5s infinite alternate;
+
+      }
+
+      &.bottom:before {
+
+        bottom: 100px;
+        right: 60px;
+        animation: result_round_bottom 2s 1s infinite alternate;
+
+      }
+
+      @keyframes result_round_top {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(0, 8px, 0);
+        }
+      }
+
+      @keyframes result_round_bottom {
+        from {
+          transform: translate3d(0, 0, 0);
+        }
+        to {
+          transform: translate3d(0, -8px, 0);
+        }
+      }
 
     }
+
   }
   /*输入框*/
   .login_input{
@@ -31,7 +110,8 @@
     padding: 5px 10px;
     background:#80d9b9;
     border-radius: 10px;
-    margin-top: 20px;
+    margin-bottom: 20px;
+
     .input_icon{
       display: block;
       width: 50px;
@@ -59,17 +139,18 @@
     }
   }
 
+
   /*短信验证*/
   .login_text{
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     color: white;
-    padding: 15px 10px;
+    padding: 0 10px;
     margin-bottom: 24px;
     .yao_text_left{
       &:active{
-        color: #E9E9E9;
+        opacity: .6;
       }
     }
   }
