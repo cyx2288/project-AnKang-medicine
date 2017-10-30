@@ -43,13 +43,32 @@
             <div class="message_address_top">请选择配送地址</div>
 
 
-            <div>
+            <div class="main_address_select" onclick="addressSelect.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     firstTargetDom:document.getElementById('message_address_select1'),
+
+     lastTargetDom:document.getElementById('message_address_select2'),
+     fn:function() {
+       addressSelect.hide();
+        console.log(chooseAdressId);//当前选择地址ID
+
+     }
+
+     })
+}
+
+})">
 
                 <div class="message_address_select yao_alignment_center">
 
                     <div>所在地区</div>
 
-                    <div id="message_address_select1">上海市上海市黄浦区</div>
+                    <div id="message_address_select1">请选择</div>
 
                 </div>
 
@@ -57,7 +76,7 @@
 
                     <div>街道</div>
 
-                    <div id="message_address_select2">外滩街道</div>
+                    <div id="message_address_select2">请选择</div>
 
                 </div>
 
@@ -75,3 +94,15 @@
     </div>
 
 </div>
+
+
+<%- include('address.ejs')%>
+
+<script>
+
+    addressSelect = new jfShowPop({
+
+        'ele': 'delivery_address'
+
+    })
+</script>
