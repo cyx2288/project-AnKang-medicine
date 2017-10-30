@@ -1,6 +1,6 @@
 <head>
 
-    <title>找回密码</title>
+    <title>用户注册</title>
 
 </head>
 <body>
@@ -14,6 +14,13 @@
     "placeholder":"请输入手机号"
     }) %>
 
+    <!--普通输入-输入登录密码-->
+    <%- include('../../component/input/input_normal.ejs' ,{
+    "icon":"../../images/icon_login_password.png",
+    "inputType":"password",
+    "placeholder":"请输入登录密码"
+    }) %>
+
     <!--验证倒计时输入-输入手机号-->
     <%- include('../../component/input/input_check.ejs' ,{
     "icon":"../../images/icon_login_envelope.png",
@@ -21,17 +28,18 @@
     "placeholder":"请输入验证码"
     }) %>
 
-    <!--普通输入-输入新密码-->
+    <!--普通输入-输入推荐人手机号-->
     <%- include('../../component/input/input_normal.ejs' ,{
-    "icon":"../../images/icon_login_password.png",
-    "inputType":"password",
-    "placeholder":"请输入新密码"
+    "icon":"../../images/icon_login_people.png",
+    "inputType":"tel",
+    "placeholder":"请输入推荐人手机号"
     }) %>
+
 
 </section>
 
 <%- include('../../component/input/button_common.ejs',{
-"text":"验证并初始化登录密码"
+"text":"现在注册"
 }) %>
 
 
