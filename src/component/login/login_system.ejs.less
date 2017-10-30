@@ -1,0 +1,109 @@
+/*用户登录*/
+.login_home_system{
+  width: 100%;
+  height: 100%;
+  background: #49c999;
+  /*头部背景*/
+  .background_title{
+    width: 100%;
+    height: 200px;
+    background: #E9E9E9;
+    position: relative;
+    /*商城logo*/
+    .login_home_logo{
+      background: #fff;
+      position: absolute;
+      top:50%;
+      left:50%;
+      border-radius: 26px;
+      margin:-32px 0 0 -70px;
+      font-size: 26px;
+      padding: 10px 15px;
+      color: #49c999;
+
+    }
+  }
+  /*输入框*/
+  .login_input{
+    display: block;
+    height: 50px;
+    margin: 0 10px;
+    padding: 5px 10px;
+    background:#80d9b9;
+    border-radius: 10px;
+    margin-top: 20px;
+    .input_icon{
+      display: block;
+      width: 50px;
+      height: 100%;
+      float: left;
+      img{
+        margin-top: 14%;
+        margin-left: 10%;
+        width: 66%;
+
+      }
+    }
+    .input_number{
+      display: block;
+      height: 100%;
+      margin-left: 50px;
+      input{
+        width: 100%;
+        height: 100%;
+        font-size: 20px;
+      }
+      input::-webkit-input-placeholder{
+        color: white;
+      }
+    }
+  }
+
+  /*短信验证*/
+  .login_text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: white;
+    padding: 15px 10px;
+    margin-bottom: 24px;
+    .yao_text_left{
+      &:active{
+        color: #E9E9E9;
+      }
+    }
+  }
+  /*登录按钮*/
+  .login_button_solid{
+    margin: 0 40px;
+    height: 50px;
+    display: block;
+    margin-top: 10px;
+    button{
+      border-radius: 50px;
+      background: #ffffff;
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      color: #49c999;
+
+    }
+  }
+  .login_button_hollow{
+    margin: 0 40px;
+    height: 50px;
+    display: block;
+    margin-top: 10px;
+    button{
+      border-radius: 50px;
+      border: 1px solid #ffffff;
+      width: 100%;
+      height: 100%;
+      font-size: 20px;
+      color: #ffffff;
+
+    }
+  }
+
+
+}
