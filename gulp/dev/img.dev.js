@@ -25,6 +25,19 @@ function devImg() {
         .pipe(gulp.dest('build/images'));
 
 
+    gulp.src('src/icon/*.{png,jpg}')
+
+        .pipe(cache(imagemin({
+
+            progressive: true,
+
+            use: [pngquant()]
+
+        })))
+
+        .pipe(gulp.dest('build/icon'));
+
+
 }
 
 module.exports = devImg;

@@ -1,0 +1,116 @@
+
+
+.main_product{
+
+  .product_title{
+    text-align: center;
+    font-size: 18px;
+    padding: 10px 0;
+
+    @media screen and(max-width: 330px) {
+      font-size: 16px;
+    }
+
+  }
+  .product_sale{
+
+    .product_title{
+
+      color: #ff892b;
+      span{
+        background: -webkit-linear-gradient(left, #ff892b , #ffcd02);     /* 背景色渐变 */
+        -webkit-background-clip: text;         /* 规定背景的划分区域 */
+        -webkit-text-fill-color: transparent;  /* 防止字体颜色覆盖 */
+      }
+
+
+    }
+
+    .sale_box{
+      padding: 0 10px;
+
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      >a{
+        background: #ffffff;
+        color: #4a4a4a;
+        width: 49%;
+        float: left;
+        margin-bottom: 5px;
+        padding: 15px 10px;
+        box-sizing: border-box;
+        box-shadow: 1px 2px 2px #E9E9E9;
+        border-radius: 10px;
+
+        &:active{
+          opacity: 0.5;
+        }
+
+
+        &:nth-child(2n+1) {
+          margin-right: 5px;
+        }
+
+        >div{
+
+          flex-shrink: 0;
+          &:first-child{
+            width: 50%;
+            height: calc(~"((100vw - 20px)*0.49 - 20px)*0.5");
+            img{
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &:last-child{
+
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-flow: column;
+            width: 50%;
+            height: calc(~"((100vw - 20px)*0.49 - 20px)*0.5");
+            padding-left: 5px;
+            .name{
+              font-size: 14px;
+              display: -webkit-box;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              -webkit-box-orient: vertical;
+              -webkit-box-align: center;
+              -webkit-column-count: 1;
+              height: 22px;
+            }
+            .sale_icon{
+              font-size: 12px;
+              width: 35px;
+              height: 18px;
+              background: #49c999;
+              color: #ffffff;
+              text-align: center;
+              line-height: 18px;
+              border-radius: 5px;
+            }
+            >.price{
+
+              color: #ff892b;
+              font-size: 16px;
+
+              @media screen and(max-width: 330px) {
+                font-size: 14px;
+              }
+
+            }
+          }
+        }
+
+      }
+    }
+
+  }
+}
