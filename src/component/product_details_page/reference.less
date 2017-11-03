@@ -1,0 +1,200 @@
+.medicine_reference{
+
+  background: #ffffff;
+
+  .reference_title{
+    padding: 10px 15px;
+    position: relative;
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: solid 1px #dddddd;
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+
+    >p{
+      img{
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+        vertical-align:bottom;
+      }
+
+      span{
+        color: #49c999;
+        display: inline-block;
+
+        &:active{
+          opacity: 0.5;
+        }
+        &:last-child{
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+
+  .reference{
+
+    padding: 10px 15px;
+    position: relative;
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: solid 1px #dddddd;
+      -webkit-transform: scaleY(0.7);
+      transform: scaleY(0.7);
+    }
+
+    .cloum{
+      margin-bottom: 10px;
+
+      p{
+        &:first-child{
+          flex-shrink: 0;
+          display: inline-block;
+          width: 32px;
+          height: 32px;
+          margin-right:5px;
+          text-align: center;
+          line-height: 32px;
+          font-size: 16px;
+          color: #ffffff;
+          background: #49c999;
+          border-radius: 50%;
+        }
+
+        >span{
+          &:first-child{
+            font-size: 16px;
+            display: block;
+          }
+          &:last-child{
+            font-size: 12px;
+            display: block;
+            color: #ababab;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-align: center;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    .product_reference{
+      width: 100%;
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+      box-sizing: border-box;
+
+      &:after{
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      >a{
+        display: inline-block;
+        color: #4a4a4a;
+        flex-shrink: 0;
+        width: 35%;
+        padding-right: 15px;
+       // float: left;
+
+        &:active{
+          opacity: 0.5;
+        }
+
+        >p{
+          position: relative;
+          img{
+            width: 100%
+          }
+
+          &.name{
+            font-size: 16px;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-align: center;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 1;
+            height: 25px;
+            margin-top: 10px;
+          }
+
+          &.name+.text_function{
+            font-size: 12px;
+            color: #ababab;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-align: center;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            height: 40px;
+            margin: 1px 0;
+          }
+
+          span{
+            &:first-child{
+              font-size: 16px;
+            }
+            &:last-child{
+              color: #ababab;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+
+
+        }
+      }
+    }
+
+  }
+
+  .reference_buy_btn{
+    padding: 10px 15px;
+    position: relative;
+    text-align: right;
+
+    a{
+      display: inline-block;
+      width: 100px;
+      border-radius: 30px;
+      background: none;
+      text-align: center;
+      padding: 2px 0;
+
+      &:active{
+        opacity: 0.5;
+      }
+
+      &.green{
+        color: #49c999;
+        border: solid 1px #49c999;
+      }
+      &.orange{
+        margin-left: 10px;
+        color: #ff892b;
+        border: solid 1px #ff892b;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<div class="delivery_address" onclick="addressSelect.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     lastTargetDom:document.getElementById('address_info'),
+     fn:function() {
+       addressSelect.hide();
+        console.log(chooseAdressId);//当前选择地址ID
+
+     }
+
+     })
+}
+
+})">
+    <span>配送至：</span>
+    <span class="address_info" id="address_info">凯旋路808号凯旋路凯旋路凯旋路</span>
+</div>
+
+<script>
+
+    addressSelect = new jfShowPop({
+
+        'ele': 'delivery_address',
+
+         'fatherId':'delivery_address',
+
+        'scrollClassname':'address'
+    })
+</script>

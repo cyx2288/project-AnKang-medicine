@@ -1,0 +1,49 @@
+.medicine_images{
+  .product_images_nav .slide_down {
+    position: relative;
+    text-align: center;
+    color: #ababab;
+    margin: 20px 0;
+    font-size: 16px;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 20%;
+      width: 10%;
+      border: 1px solid #ababab;
+      color: #ababab;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.2);
+      transform: scaleY(0.2);
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20%;
+      width: 10%;
+      border: 1px solid #ababab;
+      color: #ababab;
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      -webkit-transform: scaleY(0.2);
+      transform: scaleY(0.2);
+    }
+  }
+
+  .images_info{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    line-height: 0;
+    img{
+      width: 100%;
+    }
+  }
+}
