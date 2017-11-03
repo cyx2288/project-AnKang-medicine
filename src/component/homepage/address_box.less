@@ -1,0 +1,32 @@
+.delivery_address{
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  left: 15px;
+  background: rgba(251,251,251,0.9);
+  height: 20px;
+  padding: 5px 10px;
+  border-radius: 30px;
+  border: solid 1px #E9E9E9;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &:active{
+    opacity: 0.8;
+  }
+
+
+  .address_info{
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+    -webkit-line-clamp: 1;
+   // height: 25px;
+    margin-bottom: 3px;
+  }
+
+}
