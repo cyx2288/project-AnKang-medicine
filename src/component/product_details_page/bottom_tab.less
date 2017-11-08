@@ -2,6 +2,7 @@
 footer.bottom_product_tabbar{
   z-index: 500;
   height: 55px;
+  width: 100%;
   .tab_box{
     box-sizing: border-box;
     height: 100%;
@@ -14,6 +15,7 @@ footer.bottom_product_tabbar{
     left: 0;
     height: 55px;
     width: 100%;
+    overflow: hidden;
     font-size: 14px;
     color: #c91523;
     background-color: #fff;
@@ -33,19 +35,18 @@ footer.bottom_product_tabbar{
     }
     a{
       display: block;
-      padding: 0 12px;
+     // padding: 0 12px;
       font-size: 12px;
       height: 100%;
       box-sizing: border-box;
-      width: 100%;
+      //width: 100%;
+      flex: 1;
       &:active{
         -webkit-filter: grayscale(20%);
       }
       .tabbar_icon{
-        display: flex;
-        align-items: center;
         padding-top: 8px;
-        -webkit-filter: grayscale(100%);
+        text-align: center;
         img{
           width: 22px;
           height: 22px;
@@ -55,13 +56,12 @@ footer.bottom_product_tabbar{
       p{
         line-height: 20px;
         text-align: center;
+        color: #ababab;
         -webkit-filter: grayscale(100%);
         font-size: 10px;
         white-space: nowrap;
         height: 20px;
         overflow: hidden;
-
-        opacity:.6;
       }
       &.btn:active{
         opacity: 0.6;
@@ -69,7 +69,8 @@ footer.bottom_product_tabbar{
     }
 
     a.shopping_btn{
-      width: 200%;
+      //width: 200%;
+      flex: 2;
       color: #fff;
       font-size: 16px;
       line-height: 55px;

@@ -62,6 +62,10 @@ var shoppingCart = {
 
     run: function (details) {
 
+        var _this=this;
+
+
+
         this.xhr(details);
 
         this.changeClass(details)
@@ -141,6 +145,9 @@ var shoppingCart = {
 
     /*渲染地址列表*/
     fn: function (thisJson,details) {
+
+        var _this=this;
+        _this.showaddress=details.addressPart||0;//判断当前是否将地址分开显示(true-分开；false-不分开)
 
         var wrightHtmlOne = details.firstTargetDom;
 
@@ -223,8 +230,6 @@ var shoppingCart = {
 
         var thisCityAll = [];
 
-        //chooseAdressId=[];
-
         /*每个父切换元素*/
         function fatherEleClick(evt) {
 
@@ -293,13 +298,43 @@ var shoppingCart = {
 
                 else {
 
-                    var thisInnerHtmlOne=thisCityAll[0];
+                    if( !_this.showaddress){
 
-                    var thisInnerHtmlTwo=thisCityAll[1];
+                        var thisInnerHtmlOne=thisCityAll[0];
 
-                    wrightHtmlOne.innerHTML=thisInnerHtmlOne;
+                        var thisInnerHtmlTwo=thisCityAll[1];
 
-                    wrightHtmlTwo.innerHTML=thisInnerHtmlTwo;
+                        if(wrightHtmlOne){
+                            wrightHtmlOne.innerHTML=thisInnerHtmlOne;
+                        }
+
+                        if(wrightHtmlTwo){
+                            wrightHtmlTwo.innerHTML=thisInnerHtmlTwo;
+                        }
+
+                    }else {
+
+                        var thisInnerHtml='';
+
+                        for (var x = 0; x < thisCityAll.length; x++) {
+
+                            thisInnerHtml += thisCityAll[x];
+
+                            if(x!=thisCityAll.length-1) {
+
+                                thisInnerHtml += '，'
+
+                            }
+
+                        }
+
+
+
+                        wrightHtmlOne.innerHTML=thisInnerHtml
+
+                    }
+
+
 
 
                     chooseAdressId=(function(){

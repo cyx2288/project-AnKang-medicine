@@ -1,7 +1,7 @@
 <footer class="bottom_product_tabbar">
     <div class="tab_box"></div>
     <div class="product_tabbar_contain">
-        <a  class="btn" href="#">
+        <a  class="btn" href="../homepage/main.html">
             <div class="tabbar_icon"><img src="../../images/icon_AK_home2.png"></div>
             <p>商城首页</p>
         </a>
@@ -9,8 +9,8 @@
             <div class="tabbar_icon"><img src="../../images/icon_AK_shop2.png"></div>
             <p>购物车</p>
         </a>
-        <a class="shopping_btn orange">加入购物车</a>
-        <a class="shopping_btn red">立即购买</a>
+        <a class="shopping_btn orange" onclick="showProductSku.show({fn:function() {jfProductDetails.changeHideBtn('orange');}})">加入购物车</a>
+        <a class="shopping_btn red" onclick="showProductSku.show({fn:function() {jfProductDetails.changeHideBtn('red');}})">立即购买</a>
     </div>
 
 </footer>

@@ -7,13 +7,34 @@
 <div class="product_page">
 
 <!--商品主图-->
-<%- include('../../component/product_details_page/product_banner.ejs')%>
+<%- include('../../component/product_details_page/product_details_1_autoPlay.ejs')%>
 
+    <!--商品详情-->
+
+<%- include('../../component/product_details_page/medicine_details.ejs')%>
+
+    <!--选择地址-->
+
+    <%- include('../../component/product_details_page/address_choose.ejs')%>
+
+    <!--常见套餐选择-->
+    <%- include('../../component/product_details_page/reference.ejs')%>
+
+    <%- include('../../component/product_details_page/medicine_table.ejs')%>
+
+    <!--图片详情页-->
+    <%- include('../../component/product_details_page/medicine_img.ejs')%>
 
 <!--固定底部-->
     <%- include('../../component/product_details_page/bottom_tab.ejs')%>
 </div>
 
+<!--地址弹出框-->
+<%- include('../../component/basic/address.ejs')%>
 
+<!--立即购买以及加入购物车弹出框-->
+<%- include('../../component/product_details_page/product_pop_up/product_prompt_4_buy.ejs')%>
+
+<%- include('../../component/product_details_page/bottom_tab.ejs')%>
 </body>
 </html>

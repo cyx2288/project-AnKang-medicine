@@ -1,0 +1,86 @@
+
+    <div class="jf_pop_up" id="product_prompt_buy">
+
+        <div class="jf_pop_up_main">
+
+            <div class="pop_top">
+
+                <div class="pop_title">请选择</div>
+
+                <div class="pop_cancel"></div>
+
+                <div class="pop_line"></div>
+
+            </div>
+
+            <div class="pop_main" id="main_sku">
+                <div class="pop_content">
+                    <!--sku 选择-->
+                    <div class="sku_title">版本</div>
+                    <div class="sku_contain">
+                        <div class="sku_box choose_tab">家庭版</div>
+                        <div class="sku_box">儿童版</div>
+                        <div class="sku_box">成人版</div>
+                        <div class="sku_box out_of_stock">老人版</div>
+                        <div class="sku_box ">标准装</div>
+                    </div>
+                    <!--sku 颜色-->
+                    <div class="sku_title">包装</div>
+                    <div class="sku_contain">
+                        <div class="sku_box choose_tab">豪华大礼包</div>
+                        <div class="sku_box">10gX10袋</div>
+                        <div class="sku_box">15gX20袋</div>
+                        <div class="sku_box">5gX5袋</div>
+                    </div>
+                </div>
+                <!--数量-->
+                <div class="sku_volume_purchased yao_alignment_center">
+                    <div>数量</div>
+                    <%- include('product_prompt_4_buy_volume.ejs')%>
+                </div>
+                <!-- -->
+                <div class="prompt_btn">
+                    <a class="product_prompt_btn orange hidebtn" onclick=" showProductSku.hide()">
+                        <div>加入购物车</div>
+                    </a>
+                    <a class="product_prompt_btn red ">
+                        <div>立即购买</div>
+                    </a>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="jf_pop_up_bg">
+
+        </div>
+
+    </div>
+
+<script>
+
+    //弹出框方法
+    showProductSku = new jfShowPop({
+
+        'ele':'product_prompt_buy',//弹框id
+
+        'scrollClassname':'pop_content'//可选参数 该id下带有滚动条元素的classname
+    })
+
+
+    //sku 选择
+
+    jfProductDetails.skuBoxChange();
+
+
+    //购物车加减
+    jfProductDetails.volumeChange(true);
+
+
+
+
+
+
+
+</script>
