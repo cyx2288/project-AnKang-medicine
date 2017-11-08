@@ -1,0 +1,48 @@
+.all_brand{
+  padding: 25px 10px 10px 10px;
+  background: #ffffff;
+  flex-wrap: wrap;
+
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+
+  >a{
+    display: inline-block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    margin-bottom: 15px;
+
+    &:active{
+      opacity: 0.5;
+    }
+
+    >p{
+      width: 75%;
+      margin: 0 auto;
+
+      &:first-child{
+        height: 12%;
+        height: calc(~"(100vw - 20px)*0.25*0.75");
+        border-radius: 50%;
+        box-shadow: 0 0 2px 2px #E9E9E9;
+        overflow: hidden;
+
+        img{
+          width: 100%;
+        }
+      }
+
+      &:last-child{
+        margin-top: 10px;
+      }
+
+
+
+    }
+
+  }
+}
