@@ -25,6 +25,12 @@ function devJs(){
 
         .pipe(connect.reload());
 
+    gulp.src(['src/api/*']) //该任务针对的文件7
+
+        .pipe(gulp.dest('build/api'))
+
+        .pipe(connect.reload());
+
 }
 
 

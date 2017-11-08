@@ -1,0 +1,43 @@
+.hot_news{
+  padding: 10px 15px;
+  background: #ffffff;
+
+  span{
+    position: relative;
+    &:first-child{
+      display: inline-block;
+      width: 40px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      background: #ff892b;
+      color: #ffffff;
+      transform: skew(-10deg);
+      border-radius: 6px;
+      margin-right: 12px;
+      flex-shrink: 0;
+
+    }
+
+    &:last-child{
+      padding-left: 12px;
+      color: #ababab;
+      &:after{
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        top: 15%;
+        height: 70%;
+        border-left: solid 1px #dddddd;
+
+      }
+    }
+  }
+}
+
+.certificate_tips{
+  text-align: center;
+  color: #ababab;
+  margin: 10px 0
+}

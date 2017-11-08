@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>首页</title>
+</head>
+
+<body>
+<!--顶部搜索-->
+<%- include('../../component/homepage/top_search.ejs')%>
+
+<!--banner轮播-->
+
+<%- include('../../component/homepage/banner.ejs')%>
+
+<!--头条-->
+<%- include('../../component/homepage/new.ejs')%>
+
+<!--售卖商品-->
+
+<%- include('../../component/homepage/product_list/main.ejs')%>
+
+<!--活动banner-->
+<%- include('../../component/homepage/banner_active.ejs')%>
+
+<!--开通门店-->
+
+<%- include('../../component/homepage/open_store.ejs')%>
+
+
+
+<p class="certificate_tips">互联网药品交易服务资格证书：京C2016888</p>
+
+
+
+
+
+<!--底部导航-->
+<%- include('../../component/basic/bottom_tab.ejs',{
+"tabone":true,
+"tabtwo":false,
+"tabthree":false,
+"tabfour":false
+})%>
+
+</body>
+</html>
