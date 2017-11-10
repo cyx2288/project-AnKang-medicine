@@ -1,0 +1,33 @@
+<html>
+<head>
+    <title>购物车</title>
+</head>
+<body>
+<div class="shopping_cart_page">
+
+    <!--地址选择模块-->
+    <%- include('../../component/shopping_cart/address_box.ejs')%>
+
+
+    <!--购物车为空-->
+    <%- include('../../component/shopping_cart/shopping_nolist.ejs')%>
+
+
+    <!--近期热卖-->
+    <%- include('../../component/shopping_cart/hot_sale.ejs')%>
+
+</div>
+
+<!--底部导航-->
+<%- include('../../component/basic/bottom_tab.ejs',{
+"tabone":false,
+"tabtwo":false,
+"tabthree":true,
+"tabfour":false
+})%>
+
+
+<!--地址弹出框-->
+<%- include('../../component/basic/address.ejs')%>
+</body>
+</html>
