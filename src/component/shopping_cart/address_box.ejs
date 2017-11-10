@@ -1,0 +1,40 @@
+<div class="address_choose yao_shadow yao_alignment_middle" onclick="addressSelect.show({fn:
+
+function(){
+
+     shoppingCart.run({
+     api: '../../api/address.json',
+     type: 'get',
+     firstTargetDom:document.getElementById('address_info'),
+     'addressPart':true,//ture表示不分开显示地址,默认为false.表示分开显示地址
+     fn:function() {
+       addressSelect.hide();
+
+       console.log(chooseAdressId);//当前选择地址ID
+
+     }
+
+     })
+}
+
+})">
+    <p>送至：</p>
+    <p><img src="../../images/icon_AK_address.png"><span id="address_info">上海市黄浦区三环以内</span></p>
+</div>
+
+
+
+
+<script>
+
+    addressSelect = new jfShowPop({
+
+        'ele': 'delivery_address',
+
+        'fatherId':'delivery_address',
+
+        'scrollClassname':'address'
+    })
+
+
+</script>

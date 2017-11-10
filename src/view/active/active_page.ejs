@@ -1,3 +1,6 @@
+
+
+<html>
 <head>
 
     <title>活动</title>
@@ -8,16 +11,42 @@
 <%- include('../../component/active/active_banner.ejs')%>
 
 <!--特价药品内容-->
-<%- include('../../component/active/active_section.ejs',{
-"title":"特价药品"
-}) %>
+<%- include('../../component/active/active_section.ejs') %>
 
-<%- include('../../component/active/active_section.ejs',{
-"title":"特价器械"
-}) %>
 
-<!--底部banner-->
-<%- include('../../component/active/active_banner_bottom.ejs')%>
+<footer class="bottom_tabbar">
+    <div class="tab_box"></div>
+    <div class="bottom_tabbar_contain yao_alignment_center">
+        <a href="../homepage/main.html">
+            <div class="tabbar_icon">
+                <img src="../../icon/icon_mian_home_green.png">
+
+            </div>
+            <p>首页</p>
+        </a>
+        <a class="current_page">
+            <div class="tabbar_icon">
+                <img src="../../icon/icon_main_active_green.png">
+
+            </div>
+            <p>活动</p>
+        </a>
+        <a  href="../shopping_cart/shopping_cart_main.html">
+            <div class="tabbar_icon">
+                <img src="../../icon/icon_main_shopping_green.png">
+            </div>
+            <p>购物车</p>
+        </a>
+        <a href="">
+            <div class="tabbar_icon"><img src="../../icon/icon_main_individual_green.png">
+                <p>个人中心</p>
+            </div>
+        </a>
+    </div>
+</footer>
 
 
 </body>
+
+
+</html>
