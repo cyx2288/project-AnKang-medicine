@@ -12,7 +12,7 @@
             <p><span>总额：</span><span>¥19.99</span></p>
         </div>
 
-        <a>去结算</a>
+        <a href="../order/submit_order_page.html">去结算</a>
     </div>
 
     <div class="bottom_delete yao_alignment_center">
@@ -32,12 +32,6 @@
     //删除事件
     document.getElementsByClassName('delete_btn')[0].addEventListener("click",function(){
 
-        var thisbalanceBox=shoppingBoxFn.judegNocheck();//判断当前是有有选中，
-
-        if(!thisbalanceBox){
-            jfShowTips.toastShow({"text":"请选择需要删除的商品"});
-
-        }else {
             //对话框
             jfShowTips.dialogShow({
                 'mainText':'友情提示',
@@ -70,18 +64,11 @@
 
                         }
 
-
-
                     }
-
-
 
                 }
 
             })
-        }
-
-
 
     },false)
 
