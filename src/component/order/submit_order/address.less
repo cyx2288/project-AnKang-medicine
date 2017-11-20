@@ -1,0 +1,96 @@
+.order_page{
+  .address_select{
+    background: #ffffff;
+    padding:  10px;
+    border-bottom: solid 1px #10a6e2;
+    color: #4a4a4a;
+
+    &:active{
+      opacity: 0.5;
+    }
+
+    >div{
+      img{
+        width: 26px;
+       height: 26px;
+        margin-right: 10px;
+      }
+    }
+
+    >div.check_address{
+      position: relative;
+      flex-grow: 1;
+      margin-right:20px;
+
+      &:after{
+        content: ">";
+        font-size: 16px;
+        color: #4a4a4a;
+        position: absolute;
+        right: -20px;
+        top: 35%;
+      }
+
+    }
+
+  }
+
+  .address_list{
+   .address_select{
+    border-bottom: none;
+      padding: 12px 10px;
+      position: relative;
+
+     &:active{
+       opacity: 1;
+     }
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: solid 1px #dddddd;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+      }
+
+      > div.check_address {
+        margin-right: 30px;
+
+        &:after{
+          content:"";
+        }
+      }
+    }
+
+    .choosed{
+      position: relative;
+      background: #f9f4df;
+     &:before{
+       content: "";
+       position: absolute;
+       right: 16px;
+       top: 25px;
+       width: 8px;
+       height: 16px;
+       border-bottom: solid 2px #ff892b;
+       border-right: solid 2px #ff892b;
+       transform: rotate(45deg);
+     }
+
+    }
+  }
+
+  .checked_address.address_list{
+
+    .address_select:after {
+      content: "";
+      border: none;
+    }
+    .address_select > div.check_address {
+      margin-right: 0;
+    }
+  }
+}

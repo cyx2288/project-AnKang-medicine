@@ -11,46 +11,12 @@
     height: 55px;
     line-height: 55px;
 
-    input{
-      position: relative;
-      width: 20px;
-      height: 20px;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 50%;
+    span{
       display: inline-block;
-      vertical-align: middle;
-      cursor: default;
-      appearance: none;
-      user-select: none;
-      transition: background-color ease 0.1s;
-      margin-right: 10px;
+      margin-left: 10px;
+    }
 
-      &:after{
-        content: '';
-        width: .5rem;
-        height: .3rem;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-left: -0.25rem;
-        margin-top: -0.25rem;
-        background: 0 0;
-        border: 1px solid #fff;
-        border-top: 0;
-        border-right: 0;
-        z-index: 2;
-        border-radius: 0;
-        -webkit-transform: rotate(-45deg);
-        transform: rotate(-45deg);
-      }
-    }
-    input:checked{
-      background-color: #ff0200;
-      border: 1px solid #ff0200;
-      text-align: center;
-      background-clip: padding-box;
-    }
+
   }
 
   >div>a{
@@ -154,5 +120,53 @@
     }
 
   }
+
+}
+
+
+.aui-radio{
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: default;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-transition: background-color ease 0.1s;
+  transition: background-color ease 0.1s;
+
+  &:after{
+    content: '';
+    width: .5rem;
+    height: .3rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -0.25rem;
+    margin-top: -0.25rem;
+    background: 0 0;
+    border: 1px solid #fff;
+    border-top: 0;
+    border-right: 0;
+    z-index: 2;
+    border-radius: 0;
+    transform: rotate(-45deg);
+  }
+
+  &:checked{
+
+    background-color: #ff0200;
+    border: 1px solid #ff0200;
+    text-align: center;
+    background-clip: padding-box;
+
+  }
+
 
 }

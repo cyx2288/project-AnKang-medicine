@@ -8,13 +8,18 @@ var akMedicineTab={
 
         var _this=this;
 
+
         if(!details){
             details={}
         }
 
+        var clickEle=details.clickEle ||'category_tab';
+
+        var showTagName=details.showTagName||'span';
+
         _this.fn=details.fn||0;
 
-        var chooseAllDate=document.getElementsByClassName('category_tab')[0];
+        var chooseAllDate=document.getElementsByClassName(clickEle)[0];
 
         chooseAllDate.addEventListener("click",function(e){
 
@@ -22,7 +27,7 @@ var akMedicineTab={
 
             var thistargetEle=evt.srcElement||evt.target;
 
-            if(thistargetEle.className.indexOf('choosed')<0&&thistargetEle.tagName.toLowerCase()=="span"){
+            if(thistargetEle.className.indexOf('choosed')<0&&thistargetEle.tagName.toLowerCase()==showTagName){
 
                 if(document.getElementsByClassName('choosed')[0]){
                     document.getElementsByClassName('choosed')[0].className="";
