@@ -209,13 +209,4 @@ var shoppingBoxFn={
         return false;
     },
 
-
-
-
-
-
-
-
-
-
 }
