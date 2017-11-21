@@ -1,0 +1,134 @@
+.fixed_top_bar{
+.bar{
+  padding-bottom: 45px;
+}
+  .all_tab{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    p{
+      position: relative;
+      padding: 12px 10px;
+      color: #4a4a4a;
+      &:active{
+      opacity: 0.5;
+    }
+    }
+    p.show{
+      &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        border-bottom: solid 2px #49c999;
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+      }
+
+    }
+  }
+}
+
+.my_order_page{
+  width: 100%;
+  overflow: hidden;
+  margin-top: 10px;
+
+  .order_box{
+    width: 300%;
+    transition: transform 0.2s ease-in-out;
+
+    .box{
+        width: 100%;
+        height: 100%;
+        flex: 1;
+
+      .lists{
+        background: #ffffff;
+        display: block;
+        margin-bottom: 10px;
+        >div{
+          padding: 0 10px;
+          &:first-child{
+            padding: 10px;
+
+            p:last-child{
+              color: #49c999;
+            }
+          }
+          &:last-child{
+            padding: 10px;
+
+            p{
+
+              .price{
+                font-size: 16px;
+              }
+              span{
+
+                display: inline-block;
+                margin: 0 2px;
+              }
+            }
+
+            >p:last-child{
+             white-space: nowrap;
+            }
+          }
+        }
+        .product{
+          background: #f5f5f9;
+          background: rgba(251,251,251,1);
+          padding: 0 10px;
+          >div:first-child {
+            width: 100px;
+            height: 100px;
+           img {
+              width: 100%;
+            }
+          }
+          >div:last-child {
+            width: 75%;
+            width: calc(~"100% - 100px");
+            padding-left: 10px;
+            box-sizing: border-box;
+            p.name {
+              color: #4a4a4a;
+              font-size: 16px;
+              width: 100%;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-box-pack: center;
+              -webkit-line-clamp: 1;
+              margin-bottom: 15px;
+            }
+            p.size {
+              color: #ababab;
+              height: 40px;
+            }
+            p.price {
+              font-size: 16px;
+              color: #ff892b;
+              span:last-child {
+                color: #ababab;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+      }
+
+
+    }
+  }
+}
