@@ -3,48 +3,78 @@
  */
 
 
-var orderTabChange={
 
-    moveTab:function(){
+var orderFn={
 
-        var clickEle=document.getElementsByClassName('all_tab')[0].getElementsByTagName('p');
+    tabChange:function(num){//订单切换
+        var tabChangeContent=document.getElementsByClassName('order_box')[0];//tab主体内容
 
-        var allTabEle=document.getElementsByClassName('order_box')[0];
+        var tabChangeBar=document.getElementsByClassName('all_tab')[0].getElementsByTagName('p');//tab选项
+
+        var thisWindowWidth=window.innerWidth;
+
+        var needTranslateX=-parseFloat(num)*thisWindowWidth;
 
 
-        for(var i=0;i< clickEle.length;i++){
+        tabChangeContent.style.transform="translate3d("+needTranslateX+"px,0,0)";
 
-            clickEle[i].addEventListener('click',tabMoveFn,false);
+        tabChangeContent.style.webkitTransform="translate3d("+needTranslateX+"px,0,0)";
 
-        }
+        document.getElementsByClassName('show')[0].className= document.getElementsByClassName('show')[0].className.replace('show',"");
 
-        function tabMoveFn(e){
+        tabChangeBar[num].className="show";
+    },
 
-            document.getElementsByClassName('show')[0].className= document.getElementsByClassName('show')[0].className.replace('show',"");
+    starShow:function(){//星星点亮
+        var allStarContent=document.getElementsByClassName('star_content');
 
-            this.className="show";
+        for(var i=0;i<allStarContent.length;i++){
+            allStarContent[i].addEventListener('click',function(e){
 
-            var thisIndex=getRightIndex();
+                var evt=e||window.event;
 
-            var thisWindowWidth=window.innerWidth;
+                var thistargetEle=evt.srcElement||evt.target;
 
-            var moveDis=-thisWindowWidth*thisIndex;
+                if(thistargetEle.tagName.toUpperCase()=='IMG'){
 
-            allTabEle.style.transform='translate3d('+moveDis+'px,0,0)';
+                    var allImgEle=this.getElementsByTagName('img');
 
-        }
-        function getRightIndex(){
-            for(var j=0;j< clickEle.length;j++){
+                    for(var m=0;m<allImgEle.length;m++){
 
-                if(clickEle[j].className.indexOf('show')>-1){
+                        allImgEle[m].style.filter='grayscale(0)'
+                    }
 
-                    return j
+                    if(this.getElementsByClassName('yellow')[0]){
+
+                        this.getElementsByClassName('yellow')[0].className= document.getElementsByClassName('yellow')[0].className.replace('yellow','')
+                    }
+
+                    thistargetEle.className='yellow'
                 }
-            }
+
+            },false)
         }
 
+    },
 
+    evaluateBoxShow:function(){
+        document.getElementsByClassName('evaluate_box')[0].style.display='block';
 
+        setTimeout(function(){
 
+            document.getElementsByClassName('evaluate_box')[0].className=document.getElementsByClassName('evaluate_box')[0].className+' box_show'
+
+        },1)
+    },
+
+    evaluateBoxhide:function(){
+
+        document.getElementsByClassName('evaluate_box')[0].style.display='none';
     }
+
+
+
 }
+
+
+

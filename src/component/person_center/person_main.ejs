@@ -26,7 +26,7 @@
             <img src="../../images/personal_refund.png">
             <p>已退款</p>
         </a>
-        <a class="more">
+        <a class="more" href="my_order.html">
             <img src="../../images/personal_all.png">
             <p>全部定单 ></p>
             <span>5</span>
@@ -41,15 +41,15 @@
         </div>
 
         <div class="yao_alignment_middle lists">
-            <a>
+            <a href="my_address.html">
                 <img src="../../images/personal_car.png">
                 <p>收货地址</p>
             </a>
-            <a>
+            <a href="my_coupon.html">
                 <img src="../../images/personal_card_coupons.png">
                 <p>我的卡券包</p>
             </a>
-            <a>
+            <a class="share">
                 <img src="../../images/personal_star.png">
                 <p>我的分享</p>
             </a>
@@ -69,29 +69,76 @@
                 <img src="../../images/personal_location.png">
                 <p>配送区域</p>
             </a>
-            <a>
+            <a href="award.html">
                 <img src="../../images/personal_boon.png">
                 <p>实惠与奖励</p>
             </a>
-            <a>
+            <a href="message.html">
                 <img src="../../images/personal_news.png">
                 <p>我的消息</p>
             </a>
 
-            <a>
+            <a href="feedback.html">
                 <img src="../../images/personal_feedback.png">
                 <p>意见反馈</p>
             </a>
 
-            <a>
+            <a class="ak_telphone">
                 <img src="../../images/personal_phone.png">
                 <p>400电话</p>
             </a>
 
-            <a>
+            <a class="score">
                 <img src="../../images/personal_jifen.png">
                 <p>我的积分</p>
             </a>
         </div>
     </div>
 </div>
+
+
+
+
+<script>
+
+    //我的分享弹出框
+    document.getElementsByClassName('share')[0].addEventListener('click',function(){
+       jfShowTips.smallDialogShow({
+            'mainText':" ",
+            'minText':'为了让您更多的朋友、亲戚获得低价的购物和更好的服务，分享商品或订单，让更多的人了解到',
+            'noCancel':true,
+            checkFn:function(){
+                jfShowTips.dialogRemove()
+            }
+        })
+    },false)
+
+
+    //我的积分弹出框
+    document.getElementsByClassName('score')[0].addEventListener('click',function(){
+        jfShowTips.smallDialogShow({
+            'mainText':" ",
+            'minText':'您的购买历史将会自动累加积分，平台会不定期进行积分兑换、抵现相关活动',
+            'noCancel':true,
+            checkFn:function(){
+                jfShowTips.dialogRemove()
+            }
+        })
+    },false)
+
+    //400电话
+    document.getElementsByClassName('ak_telphone')[0].addEventListener('click',function(){
+        jfShowTips.smallDialogShow({
+            'mainText':" ",
+            'minText':'<p>安康快药支持电话买药，配送到家。<p>' +
+            '<p>在开通配送范围的用户建议APP在线下单，能享受优惠券等价格优惠和服务，需电话买药的用户直接拨打<span>400-800-1234</span>,说明药名或症状即可配药和配送</p>' +
+            '<p>本电话<span>24</span>小时服务。</p>',
+            'checkBtnText':'现在打电话',
+            'thisUrl':'tel:400-800-1234',
+            checkFn:function(){
+                jfShowTips.dialogRemove()
+            }
+        })
+    },false)
+
+</script>

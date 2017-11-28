@@ -319,6 +319,68 @@ var jfShowTips = {
 
     },
 
+    smallDialogShow:function (details) {
+
+        if(!details){//如果details未输入，则防止报错
+            details={};
+        }
+
+        var mainText = details.mainText || 'null';
+
+        var minText = details.minText || 'null';
+
+        var hasCheck = details.noCheck|| false;
+
+        var hasCancel = details.noCancel || false;
+
+        var checkFn = details.checkFn || null;
+
+        var checkBtnText=details.checkBtnText ||'确认';
+
+        var cancleBtnText=details.cancleBtnText ||'取消';
+
+        var thisUrl=details.thisUrl||'javascript:void(0)';
+
+
+        var _this=this;
+
+        _this.addBlur();
+
+        var thisBg=_this.addBg('dialog_bg');
+
+        var thisInnerHtml='<div class="text_dialog_container small_dialog"><div class="text_big">'+mainText+'</div><div class="text_small">'+minText+'</div><div class="dialog_button">';
+
+        if(!hasCheck){
+
+            thisInnerHtml+='<a class="dialog_check" href='+thisUrl+'>'+checkBtnText+'</a>'
+
+        }
+
+        if(!hasCancel){
+
+            thisInnerHtml+='<a class="dialog_cancel" href="javascript:void(0)">'+cancleBtnText+'</a>'
+
+        }
+
+        thisInnerHtml+='</div></div>';
+
+        var thisAddDialog = _this.addNode('div', thisInnerHtml, 'tip_dialog');//添加元素
+
+
+        if(thisAddDialog.getElementsByClassName('dialog_cancel')[0]) {
+
+            thisAddDialog.getElementsByClassName('dialog_cancel')[0].addEventListener('click', _this.dialogRemove.bind(_this), false);
+
+        }
+        if(checkFn) {
+
+            thisAddDialog.getElementsByClassName('dialog_check')[0].addEventListener('click',checkFn,false);
+
+        }
+
+
+    },
+
     //增加背景
     //陈羽翔
     //2017.2.4
