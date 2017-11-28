@@ -1,0 +1,54 @@
+.message_page{
+
+  .lists{
+    padding: 10px;
+
+    .date{
+      color: #ababab;
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    .content{
+    background: #ffffff;
+      padding: 10px;
+      display: block;
+
+      &:active{
+        opacity: 0.5;
+      }
+
+      .title{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-bottom: 8px;
+        color: #4a4a4a;
+        font-size: 16px;
+      }
+
+      >div{
+        font-size: 12px;
+        color: #ababab;
+
+        >p{
+          &:first-child{
+            width: 90%;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+          }
+
+          img{
+            width: 12px;
+            height: 12px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+}

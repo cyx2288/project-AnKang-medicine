@@ -1,9 +1,9 @@
 <div class="fixed_top_bar">
     <div class="bar"></div>
     <div class="all_tab yao_shadow">
-        <p class="show">全部</p>
-        <p>待付款<span>(1)</span></p>
-        <p>待评价<span>(5)</span></p>
+        <p class="show" onclick="orderFn.tabChange(0)">全部</p>
+        <p onclick="orderFn.tabChange(1)">待付款<span>(1)</span></p>
+        <p onclick="orderFn.tabChange(2)">待评价<span>(5)</span></p>
     </div>
 </div>
 
@@ -13,12 +13,12 @@
 
         <!--全部-->
         <div class="all box">
-            <a class="lists yao_shadow">
+            <div class="lists yao_shadow" >
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
                     <p>配送中</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a  href="order_details.html" class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -27,18 +27,8 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
-                    <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
-                    <p>免费配送</p>
-                </div>
-            </a>
-            <a class="lists yao_shadow">
-                <div class="yao_alignment_center">
-                    <p>共<span>4</span>件商品</p>
-                    <p>配送中</p>
-                </div>
-                <div class="product yao_alignment_middle">
+                </a>
+                <a href="order_details.html" class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -47,18 +37,18 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
-            <a class="lists yao_shadow">
+            </div>
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
-                    <p>配送中</p>
+                    <p>待付款</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -67,22 +57,42 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
+            </div>
+            <div class="lists yao_shadow">
+                <div class="yao_alignment_center">
+                    <p>共<span>4</span>件商品</p>
+                    <p>已完成</p>
+                </div>
+                <a class="product yao_alignment_middle">
+                    <div>
+                        <img src="../../images/icon_product_referrnce.jpg">
+                    </div>
+                    <div>
+                        <p class="name">999三九感冒灵颗粒</p>
+                        <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
+                        <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
+                    </div>
+                </a>
+                <div>
+                    <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
+                    <p>免费配送</p>
+                </div>
+            </div>
         </div>
 
         <!--代付款-->
         <div class="paying box">
-            <a class="lists yao_shadow">
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
                     <p>配送中</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a href="order_details.html" class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -91,18 +101,18 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
-            <a class="lists yao_shadow">
+            </div>
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
                     <p>配送中</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -111,18 +121,18 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
-            <a class="lists yao_shadow">
+            </div>
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
                     <p>配送中</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -131,21 +141,21 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
+            </div>
         </div>
         <!--待评价-->
         <div class="evaluate box">
-            <a class="lists yao_shadow">
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
-                    <p>配送中</p>
+                    <p>已完成</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a href="order_details.html" class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -154,18 +164,18 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div>
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
-            <a class="lists yao_shadow">
+            </div>
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
-                    <p>配送中</p>
+                    <p>已完成</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -174,18 +184,18 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div >
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
-            <a class="lists yao_shadow">
+            </div>
+            <div class="lists yao_shadow">
                 <div class="yao_alignment_center">
                     <p>共<span>4</span>件商品</p>
-                    <p>配送中</p>
+                    <p>已完成</p>
                 </div>
-                <div class="product yao_alignment_middle">
+                <a class="product yao_alignment_middle">
                     <div>
                         <img src="../../images/icon_product_referrnce.jpg">
                     </div>
@@ -194,12 +204,12 @@
                         <p class="size"><span>规格：</span><span>10gX4袋 无糖</span></p>
                         <p class="price yao_alignment_center"><span>¥10.50</span><span>X5</span></p>
                     </div>
-                </div>
-                <div class="yao_alignment_center">
+                </a>
+                <div >
                     <p>金额：¥<span class="price">39.99</span> 比门店便宜¥<span>3.99</span>(券减¥<span>3.99</span>)</p>
                     <p>免费配送</p>
                 </div>
-            </a>
+            </div>
         </div>
 
     </div>
@@ -207,6 +217,3 @@
 
 
 </div>
-<script>
-    orderTabChange.moveTab()
-</script>
