@@ -72,3 +72,36 @@
   }
 
 }
+
+.order_statu.order_page{
+ .order_bottom .fixed_order{
+   font-size: 14px;
+   background: #ffffff;
+   &:after {
+     content: '';
+     border: none;
+
+   }
+
+   >div{
+     padding: 5px 10px;
+
+
+     span{
+       display: inline-block;
+       padding: 4px 0;
+       width: 90px;
+       border: solid 1px #dddddd;
+       text-align: center;
+       border-radius: 30px;
+      &:last-child{
+        margin-left: 10px;
+      }
+
+       &:active{
+         opacity: 0.5;
+       }
+     }
+   }
+ }
+}

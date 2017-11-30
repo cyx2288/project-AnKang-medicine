@@ -1,18 +1,9 @@
-
-
 <html>
 <head>
-
-    <title>活动</title>
-
+    <title>个人中心</title>
 </head>
 <body>
-<!--活动页面banner部分-->
-<%- include('../../component/active/active_banner.ejs')%>
-
-<!--特价药品内容-->
-<%- include('../../component/active/active_section.ejs') %>
-
+<%- include('../../component/person_center/person_main_logged.ejs')%>
 
 <footer class="bottom_tabbar">
     <div class="tab_box"></div>
@@ -24,7 +15,7 @@
             </div>
             <p>首页</p>
         </a>
-        <a class="current_page">
+        <a href="../active/active_page.html">
             <div class="tabbar_icon">
                 <img src="../../icon/icon_main_active_green.png">
 
@@ -37,7 +28,7 @@
             </div>
             <p>购物车</p>
         </a>
-        <a href="../person_center/person_main_login.html">
+        <a class="current_page">
             <div class="tabbar_icon"><img src="../../icon/icon_main_individual_green.png">
                 <p>个人中心</p>
             </div>
@@ -45,8 +36,5 @@
     </div>
 </footer>
 
-
 </body>
-
-
 </html>
