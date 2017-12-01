@@ -11,7 +11,6 @@ a {
   bottom: calc(8vh);
   z-index: 1000;
   opacity: 0;
-  -webkit-animation: opacity_change 2s linear both;
   animation: opacity_change 2s linear both;
 }
 #tip_toast.tip_input {
@@ -28,20 +27,6 @@ a {
   border-radius: 5px;
   max-width: calc(65vw);
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
-}
-@-webkit-keyframes opacity_change {
-  0% {
-    opacity: 0;
-  }
-  5% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
 }
 @keyframes opacity_change {
   0% {
@@ -69,7 +54,6 @@ a {
   right: 0;
   margin: auto;
   border-radius: 10px;
-  -webkit-animation: showLoading 5s both;
   animation: showLoading 5s both;
   opacity: 1;
   z-index: 1000;
@@ -197,9 +181,7 @@ a {
   background: black;
   opacity: .5;
   z-index: 1000;
-  -webkit-animation: opacity_bg_change .5s;
   animation: opacity_bg_change .5s;
-  -webkit-transition: opacity .5s;
   transition: opacity .5s;
 }
 @-webkit-keyframes opacity_bg_change {
