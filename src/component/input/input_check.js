@@ -1,30 +1,32 @@
 var inputFn = {
 
-    inputCheck: function () {
+    inputCheck: function (num) {
 
         event.preventDefault();
 
-        if (this.className.indexOf('locked') == -1) {
+        var thisEle= document.getElementsByClassName('yao_input_check_button')[0];
 
-            var time = 6;
+        if (thisEle.className.indexOf('locked') == -1) {
 
-            var thisInnerHtml = this.innerHTML;
+            var time = num;
 
-            this.innerHTML = '重新发送' + time + 's';
+            var thisInnerHtml = thisEle.innerHTML;
 
-            this.className += ' locked';
+            thisEle.innerHTML = '重新发送' + time + 's';
+
+            thisEle.className += ' locked';
 
             var thisSet = setInterval(function () {
 
-                this.innerHTML = '重新发送' + (--time) + 's';
+                thisEle.innerHTML = '重新发送' + (--time) + 's';
 
                 if (time <= 0) {
 
                     clearInterval(thisSet);
 
-                    this.className = this.className.replace('locked', '');
+                    thisEle.className = thisEle.className.replace('locked', '');
 
-                    this.innerHTML=thisInnerHtml;
+                    thisEle.innerHTML=thisInnerHtml;
 
                 }
 

@@ -20,7 +20,11 @@
 
 <script>
 
-    document.getElementsByClassName('yao_input_check_button')[0].addEventListener('click',inputFn.inputCheck,false)
+    document.getElementsByClassName('yao_input_check_button')[0].addEventListener('click',function () {
+
+        inputFn.inputCheck(6)
+
+    },false)
 
 
 </script>
