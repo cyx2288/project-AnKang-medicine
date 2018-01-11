@@ -13,7 +13,7 @@ footer.bottom_tabbar{
     height: 55px;
     width: 100%;
     font-size: 14px;
-    color:#49c999;
+    color:#bbb;
     background-color: #fff;
 
     &:after{
@@ -31,7 +31,7 @@ footer.bottom_tabbar{
       display: block;
       clear: both;
     }
-    a{
+    a.current_page{
       float: left;
       z-index: 999;
       display: block;
@@ -42,31 +42,42 @@ footer.bottom_tabbar{
       width: 25%;
       flex: 1;
       color: #ababab;
-     filter:grayscale(100%);
-     -webkit-filter: grayscale(100%);
       opacity: .8;
       &:active{
         opacity: .3;
       }
       .tabbar_icon{
         text-align: center;
-        padding-top: 8px;
+        padding-top: 4px;
         img{
           width: 26px;
           height: 26px;
           margin: 0 auto;
         }
+        img:first-child{
+          display: block;
+        }
+        img+img{
+          display: none;
+        }
       }
       p{
-        line-height: 20px;
         text-align: center;
       }
-    }
-    a.current_page{
-      color: #49c999;
-      opacity: 1;
-      filter:grayscale(0);
-      -webkit-filter: grayscale(0);
+      &.on {
+        .tabbar_icon {
+          img:first-child {
+            display: none;
+          }
+          img+img{
+            display: block;
+          }
+        }
+        p {
+          color: #49c999;
+        }
+      }
     }
   }
+
 }
