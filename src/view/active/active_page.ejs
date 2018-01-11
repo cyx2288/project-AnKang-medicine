@@ -7,38 +7,46 @@
 
 </head>
 <body>
-<!--活动页面banner部分-->
-<%- include('../../component/active/active_banner.ejs')%>
 
-<!--特价药品内容-->
-<%- include('../../component/active/active_section.ejs') %>
+<div class="compatible_active">
+    <!--活动页面banner部分-->
+    <%- include('../../component/active/active_banner.ejs')%>
+
+    <!--特价药品内容-->
+    <%- include('../../component/active/active_section.ejs') %>
+
+</div>
 
 
 <footer class="bottom_tabbar">
     <div class="tab_box"></div>
     <div class="bottom_tabbar_contain yao_alignment_center">
-        <a href="../homepage/main.html">
+        <a class="current_page" href="../homepage/main.html">
             <div class="tabbar_icon">
+                <img src="../../icon/icon_main_home_gray.png">
                 <img src="../../icon/icon_mian_home_green.png">
-
             </div>
             <p>首页</p>
         </a>
-        <a class="current_page">
+        <a class="current_page on" href="../active/active_page.html">
             <div class="tabbar_icon">
+                <img src="../../icon/icon_main_active_gray.png">
                 <img src="../../icon/icon_main_active_green.png">
 
             </div>
             <p>活动</p>
         </a>
-        <a  href="../shopping_cart/shopping_cart_main.html">
+        <a class="current_page" href="../shopping_cart/shopping_cart_main.html">
             <div class="tabbar_icon">
+                <img src="../../icon/icon_main_shopping_gray.png">
                 <img src="../../icon/icon_main_shopping_green.png">
             </div>
             <p>购物车</p>
         </a>
-        <a href="../person_center/person_main_login.html">
-            <div class="tabbar_icon"><img src="../../icon/icon_main_individual_green.png">
+        <a class="current_page" href="../person_center/person_main_login.html">
+            <div class="tabbar_icon">
+                <img src="../../icon/icon_mian_individual_gray.png">
+                <img src="../../icon/icon_main_individual_green.png">
                 <p>个人中心</p>
             </div>
         </a>
@@ -48,5 +56,11 @@
 
 </body>
 
-
 </html>
+
+<script>
+
+
+    AnkangMain.CompatibleIOS11(document.getElementsByClassName('compatible_active')[0],'compatible_active_change');
+
+</script>

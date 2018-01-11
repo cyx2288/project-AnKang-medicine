@@ -1060,9 +1060,13 @@ if (browser.os.iOS) {//如果当前是IOS系统
 
             }else {
                 clicked(urlString(url), 0, 0, {
-                    'titleNView': {
-                        'backgroundColor': '#49c999',
-                        'titleColor': '#fff',
+                    hardwareAccelerated:true,
+
+                    kerne:'WKWebview',
+
+                    titleNView: {
+                        backgroundColor: '#49c999',
+                        titleColor: '#fff',
                         autoBackButton: true
                     }
                 });
@@ -1084,7 +1088,7 @@ if (browser.os.iOS) {//如果当前是IOS系统
 
             if('iOS'==plus.os.name){
 
-                timer=0;
+                window.location.href=url
 
             }
 
@@ -1092,13 +1096,13 @@ if (browser.os.iOS) {//如果当前是IOS系统
 
                 timer=500
 
+                setTimeout(function () {
+
+                    window.location.href=url
+
+                },timer)
+
             }
-
-            setTimeout(function () {
-
-                window.location.href=url
-
-            },timer)
 
 
 

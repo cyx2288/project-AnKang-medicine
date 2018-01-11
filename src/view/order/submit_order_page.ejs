@@ -6,9 +6,15 @@
 
 <div class="order_page">
 
+    <div class="order_content">
+
+
     <%- include('../../component/order/submit_order/address.ejs')%>
 
     <%- include('../../component/order/submit_order/order_main.ejs')%>
+
+    </div>
+
     <%- include('../../component/order/submit_order/fixed_bottom.ejs')%>
 
 </div>
@@ -20,3 +26,9 @@
 
 </body>
 </html>
+
+<script>
+
+AnkangMain.CompatibleIOS11(document.getElementsByClassName('order_content')[0],'compatible_active_change')
+
+</script>

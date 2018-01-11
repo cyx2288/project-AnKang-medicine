@@ -6,7 +6,8 @@
 <body>
 <div class="order_page">
 
-<%- include('../../component/order/check_order/address.ejs')%>
+
+   <%- include('../../component/order/check_order/address.ejs')%>
 
     <%- include('../../component/order/check_order/order_info.ejs')%>
 
@@ -17,3 +18,8 @@
 
 </body>
 </html>
+<script>
+
+    AnkangMain.CompatibleIOS11(document.getElementsByClassName('order_content')[0],'compatible_active_change')
+
+</script>
