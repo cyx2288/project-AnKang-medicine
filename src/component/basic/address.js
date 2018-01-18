@@ -64,8 +64,6 @@ var shoppingCart = {
 
         var _this=this;
 
-
-
         this.xhr(details);
 
         this.changeClass(details)
