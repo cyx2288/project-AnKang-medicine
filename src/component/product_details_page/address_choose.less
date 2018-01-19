@@ -4,47 +4,22 @@
   margin: 10px 0;
   background: #ffffff;
   position: relative;
-  .edit_address_box{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    -webkit-box-orient: vertical;
-
-  }
-  #address_info{
-    display: block;
-  }
-
-  .address_content{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    width: 200px;
-    width: calc(~'100% - 22px');
-    .address_arrow{
-      display: block;
-      width: 22px;
-    }
-  }
 
   &:active{
     opacity: 0.5;
   }
 
   >p{
-    display: flex;
-    align-items: center;
-    &:first-child{
-      white-space: nowrap;
-    }
     img{
       width: 22px;
       height: 22px;
       vertical-align: middle;
       margin: 0 5px;
     }
+
   }
+
+
   &:after{
     content: ">";
     font-size: 16px;
@@ -52,7 +27,5 @@
     position: absolute;
     right: 15px;
     top: 10px;
-  }
-
-
+}
 }
